@@ -1,0 +1,13 @@
+Git Commands:
+git clone- git clone --config="http.proxy=http://diana2199:diana@192.168.2.1:8080" https://github.com/diana2199-cmis/diana2199-cmis-cs2.git
+git add- add file to github
+git command- comment to changes
+git push- save to github
+
+Terminal Commands:
+pwd- view all folders and subfolders
+ls- list the contents 
+cd- move into a folder
+cd .. - move out one folder
+cat- reads and prints out contents of a file but can’t edit
+gedit- edit file

@@ -1,3 +1,4 @@
+import math
 #addition operation
 def add(a,b):
 	return a+b
@@ -23,3 +24,11 @@ def hours(a,b,c):
 	return a/b/c
 h=hours(86400,60,60)
 print h
+#using area of circle to find radius of the circle
+def area(a):
+	return math.pi* a**2
+print area(5)
+#find volume using radius of a sphere
+def volume(r):
+	return math.pi* 4/3* r**3
+print volume(5)

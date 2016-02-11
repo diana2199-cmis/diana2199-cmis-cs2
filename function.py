@@ -19,4 +19,7 @@ def div(a,b):
 z= div(2.0,3)
 print z
 #takes number of seconds and turn into number of hours
-def 
+def hours(a,b,c):
+	return a/b/c
+h=hours(86400,60,60)
+print h

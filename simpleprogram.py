@@ -1,38 +1,19 @@
 import math
+#this simple program calculates your lucky number using you birthmonth and birthdate
 
-print "Start"
+#this function does the calculation
+def calculation(birthmonth, birthdate):
+	return (birthmonth*5-5+birthdate)/6+2
 
-birthMonth = raw_input("Type your birth month (in number) = ")
+def output(name,birthmonth, birthdate,result):
+    return """{}, Your birthmonth is {}, your birthdate is {}, your lucky number is {}""".format(name,birthmonth,birthdate,result)
 
-#numbers used for calculation
-firstNumber = 5
-secondNumber = 6
-thirdNumber = 4
-fourthNumber = 9
-fifthNumber = 5
-sixthNumber = 163
+#this main function organizes functions above and calls them in correct order
+def main():
+    name = raw_input("Hello :) What's your name? ")
+    birthmonth = raw_input("Type your birthmonth (in number) ")
+    birthdate = raw_input("Type your birthdate (in number) ")
+    result = calculation(int(birthmonth),int(birthdate))
+    print output(name, birthmonth, birthdate, result)
 
-#the calculation
-firstCalc = int(birthMonth)*int(firstNumber)
-secondCalc = int(firstCalc)+int(secondNumber)
-thirdCalc = int(secondCalc)*int(thirdNumber)
-fourthCalc = int(thirdCalc)+int(fourthNumber)
-fifthCalc = int(fourthCalc)*int(fifthNumber)
-print fifthCalc
-
-#printing and more calculation
-print "Add the number above by your birth date."
-print "Then subtract 165 from the result."
-print "This number is your birth month and date."
-print "ex) 525 is May 25th, 609 is June 9th."
-
-work = raw_input("Did it work? (Yes or No)")
-Yes = True
-No = False
-if True 
-print Yay! :)
-else 
-print Try again!
-
-print "End"
-
+main()

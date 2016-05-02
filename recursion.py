@@ -1,15 +1,14 @@
 #countdown
 def countdown(n):
+	#this is the base case
+    #base case does not call itself
     if n<0:
         print "Blastoff!"
+    #this is the recursive case
+    #recursive case calls itself
     else:
         print n
         countdown(n-1)
-
-def main():
-    countdown(23)
-
-main()
 
 #countup
 def countup(n):
@@ -18,11 +17,6 @@ def countup(n):
     else:
         print n
         countup(n+1)
- 
-def main():
-    countup(-300)
-
-main()
 
 #countdownfrom
 def countdown_from_to(start,stop):
@@ -32,11 +26,6 @@ def countdown_from_to(start,stop):
         print start
         countdown_from_to(start-1,stop)
 
-def main():
-    countdown_from_to(156,99)
-
-main()
-
 #countupfrom
 def countup_from_to(start,stop):
     if start>stop:
@@ -44,11 +33,6 @@ def countup_from_to(start,stop):
     else:
         print start
         countup_from_to(start+1,stop)
-
-def main():
-    countup_from_to(2,53)
-
-main ()
 
 #adder
 def adder(next,total):
@@ -60,6 +44,10 @@ def adder(next,total):
         return adder(next,total)
 
 def main():
+    countdown(23)
+    countup(-300)
+    countdown_from_to(156,99)
+    countup_from_to(2,53)
     adder(0,0)
 
 main()

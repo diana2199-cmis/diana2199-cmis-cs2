@@ -35,6 +35,7 @@ def countup_from_to(start,stop):
         countup_from_to(start+1,stop)
 
 #adder
+#you can get information into a function by putting it as an argument
 def adder(next,total):
     if next == "":
         print "The sum is: " + str(total)

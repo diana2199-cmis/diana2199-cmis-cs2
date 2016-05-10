@@ -1,9 +1,11 @@
 # This program makes a story based on your input about yourself
 # It asks for...
+# Your name and ...
 # 1. First letter of your first name 
-# 2. Age, grade, and number of family members
-# 3. Birthday, month, and year
-# 4. 
+# 2. Age
+# 3. Grade
+# 4. Number of family members
+# 5. Birthmonth
 
 import random
 import math
@@ -20,15 +22,25 @@ def two(age):
     if int(age) < 20:
         return "<One day, she decided to run away.>"
     else:
-        return "<One day, she decide to stay home all day.>"
+        return "<One day, she decided to stay home all day.>"
     
 
 #Type in your grade in number
 def three(grade):
-    if int(grade) < 7:
-        return "<But her aunt called and asked her to go visit her>"
+    if int(grade) > 7:
+        return "<But her aunt called and asked to go visit her>"
     else: 
-        return "<But her uncle called and asked her to go visit him>"
+        return "<But her uncle called and asked to go visit him>"
+
+def four(familyMem,randomOne):
+    if int(familyMem) < 10:
+        randomOne = random.randint(10,100)
+        return randomOne
+
+def five(birthMonth,randomTwo):
+    if int(birthMonth) < 13:
+        randomTwo = random.random * 10
+        return randomTwo
 
 def output(name):
     return """*Hello {} :)""".format(name)
@@ -51,5 +63,13 @@ def main():
     grade = raw_input("*Type your current school grade in number. ")
     print "."
     print three(grade)
+    print "."
+    familyMem = raw_input("*Type number of people in your family. ")
+    print "."
+    print "<Iva had ", four(familyMem,randomOne), "baht in her bag.>"
+    print "<To save money, she decided to walk.> "
+    print "."
+    birthMonth = raw_input("Type in your birth month in number" )
+    print five(birthMonth,randomTwo)
     
 main()

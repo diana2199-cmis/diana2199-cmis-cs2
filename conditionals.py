@@ -32,14 +32,14 @@ def three(grade):
     else: 
         return "<But her uncle called and asked to go visit him>"
 
-def four(familyMem,randomOne):
-    if int(familyMem) < 10:
+def four(familyMem):
+    if int(familyMem) < 100:
         randomOne = random.randint(10,100)
         return randomOne
 
-def five(birthMonth,randomTwo):
+def five(birthMonth):
     if int(birthMonth) < 13:
-        randomTwo = random.random * 10
+        randomTwo = random.random() * 10
         return randomTwo
 
 def output(name):
@@ -66,10 +66,12 @@ def main():
     print "."
     familyMem = raw_input("*Type number of people in your family. ")
     print "."
-    print "<Iva had ", four(familyMem,randomOne), "baht in her bag.>"
+    randomOne = four(familyMem)
+    print "<Iva had", four(familyMem), "baht in her bag.>"
     print "<To save money, she decided to walk.> "
     print "."
-    birthMonth = raw_input("Type in your birth month in number" )
-    print five(birthMonth,randomTwo)
+    birthMonth = raw_input("Type in your birth month in number " )
+    print "."
+    print "<She walked for about", int(five(birthMonth)), "km, then decided to take a rest.> "
     
 main()

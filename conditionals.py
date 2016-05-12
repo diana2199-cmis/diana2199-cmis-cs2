@@ -6,6 +6,7 @@
 # 3. Grade
 # 4. Number of family members
 # 5. Birthmonth
+# 6. Birthdate
 
 import random
 import math
@@ -17,15 +18,12 @@ def one(firstLetter):
     elif firstLetter == "n" or firstLetter == "o" or firstLetter == "p" or firstLetter == "q" or firstLetter == "r" or firstLetter == "s" or firstLetter == "t" or firstLetter == "u" or firstLetter == "v" or firstLetter == "w" or firstLetter == "x" or firstLetter == "y" or firstLetter == "z":
         return "<She lived alone in a forest.> "
 
-# Type in your age in number
 def two(age):
     if int(age) < 20:
         return "<One day, she decided to run away.>"
     else:
         return "<One day, she decided to stay home all day.>"
-    
 
-#Type in your grade in number
 def three(grade):
     if int(grade) > 7:
         return "<But her aunt called and asked to go visit her>"
@@ -42,12 +40,18 @@ def five(birthMonth):
         randomTwo = random.random() * 10
         return randomTwo
 
-def output(name):
-    return """*Hello {} :)""".format(name)
+def six(birthDate):
+    if int(birthDate) > 1 and int(birthDate) == 15 and int(birthDate) < 15:
+        return "<Iva managed to get away and lived.>"
+    elif not int(birthDate) < 15:
+        return "<The lady killed Iva.>"
+
+def output(nameOne):
+    return """*Hello {} :)""".format(nameOne)
 
 def main():
-    name = raw_input("*What is your name? ")
-    print output(name)
+    nameOne = raw_input("*What is your name? ")
+    print output(nameOne)
     print "*This program will make a story based on your input about yourself."
     print "."
     print "<Once upon a time, there was a girl named Iva.>"
@@ -73,5 +77,13 @@ def main():
     birthMonth = raw_input("Type in your birth month in number " )
     print "."
     print "<She walked for about", int(five(birthMonth)), "km, then decided to take a rest.> "
+    print "<Suddenly, a strange lady came to her and tried to kill her.> "
+    print "."
+    birthDate = raw_input("*Type in your birth date. ")
+    print "."
+    print six(birthDate)
+    print "<The End :)>"
+    print "."
+    print "*Bye."
     
 main()

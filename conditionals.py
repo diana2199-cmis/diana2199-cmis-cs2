@@ -17,6 +17,8 @@ def one(firstLetter):
         return "<She lived with her family in a city.> "
     elif firstLetter == "n" or firstLetter == "o" or firstLetter == "p" or firstLetter == "q" or firstLetter == "r" or firstLetter == "s" or firstLetter == "t" or firstLetter == "u" or firstLetter == "v" or firstLetter == "w" or firstLetter == "x" or firstLetter == "y" or firstLetter == "z":
         return "<She lived alone in a forest.> "
+    else:
+        return "<She lived with her grandparents in Thailand .>"
 
 def two(age):
     if int(age) < 20:
@@ -45,45 +47,41 @@ def six(birthDate):
         return "<Iva managed to get away and lived.>"
     elif not int(birthDate) < 15:
         return "<The lady killed Iva.>"
+    else:
+        return "<Iva's fried found her and saved her from the lady.>"
+
+def seven(work):
+    if work == "yes":
+        return True
+    if work == "no":
+        return False
 
 def output(nameOne):
-    return """*Hello {} :)""".format(nameOne)
+    return '''*Hello {} :)'''.format(nameOne)
 
 def main():
     nameOne = raw_input("*What is your name? ")
-    print output(nameOne)
-    print "*This program will make a story based on your input about yourself."
-    print "."
-    print "<Once upon a time, there was a girl named Iva.>"
-    print "."
+    print """{}
+*This program will make a story based on your input about yourself.
+<Once upon a time, there was a girl named Iva.>""".format(output(nameOne))
     firstLetter = raw_input("*What is the first letter of you name? ")
-    print "."
     print one(firstLetter)
-    print "."
     age = raw_input("*Type your age in number. ")
-    print "."
     print two(age)
-    print "."
     grade = raw_input("*Type your current school grade in number. ")
-    print "."
     print three(grade)
-    print "."
     familyMem = raw_input("*Type number of people in your family. ")
-    print "."
     randomOne = four(familyMem)
-    print "<Iva had", four(familyMem), "baht in her bag.>"
-    print "<To save money, she decided to walk.> "
-    print "."
+    print """<Iva had, {}, baht in her bag.>
+<To save money, she decided to walk.> """.format(four(familyMem))
     birthMonth = raw_input("Type in your birth month in number " )
-    print "."
     print "<She walked for about", int(five(birthMonth)), "km, then decided to take a rest.> "
     print "<Suddenly, a strange lady came to her and tried to kill her.> "
-    print "."
     birthDate = raw_input("*Type in your birth date. ")
-    print "."
     print six(birthDate)
     print "<The End :)>"
-    print "."
+    work = raw_input("*Did it work? (answer yes or no) ")
+    print seven(work)
     print "*Bye."
     
 main()

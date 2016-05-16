@@ -44,12 +44,24 @@ def adder(next,total):
         next = raw_input("Running total: " + str(total) + "\n" + "Next Number: ")
         return adder(next,total)
 
+#biggest
+def biggest(number):
+	currentInput = raw_input("Next number: ")
+        if currentInput == "":
+            print number
+        elif float(currentInput) > number:
+            biggest(float(currentInput)) 
+        elif number > float(currentInput):
+            biggest(number)
+
 def main():
     countdown(23)
     countup(-300)
     countdown_from_to(156,99)
     countup_from_to(2,53)
     adder(0,0)
+    number = 0
+    biggest(number)
 
 main()
 
